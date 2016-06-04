@@ -27,21 +27,17 @@ describe('Test Profits on null', function() {
             calculateProfits().should.be.equal(0);
         });
         it('should evaluate to 0 for empty string', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits("").should.be.equal(0);
+            calculateProfits("").should.be.equal(0);
         });
      
         it('should evaluate to 0 for string MANOLO', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits("MANOLO").should.be.equal(0);
+            calculateProfits("MANOLO").should.be.equal(0);
         });
         it('should evaluate to 0 for a number', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits(10).should.be.equal(0);
+            calculateProfits(10).should.be.equal(0);
         });
         it('should evaluate to 0 for empty array', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits([]).should.be.equal(0);
+            calculateProfits([]).should.be.equal(0);
         });
         it('should evaluate to 0 when no param', function() {
             calculateProfits("").should.be.equal(1);
