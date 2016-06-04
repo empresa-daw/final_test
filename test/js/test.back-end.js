@@ -40,25 +40,19 @@ describe('Test Profits on null', function() {
             calculateProfits([]).should.be.equal(0);
         });
         it('should evaluate to 0 when no param', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits().should.be.equal(0);
+            calculateProfits().should.be.equal(0);
         });
         it('should evaluate to 0 for array car with buyprice equal -0 and sellprice 200', function() {
-            cacalculateProfits("").should.be.equal(1);lculateProfits("").should.be.equal(1);
-            //
-            //calculateProfits([coche20]).should.be.equal(200);
+            calculateProfits([coche20]).should.be.equal(200);
         });
         it('should evaluate to 0 for a car with buyprice null and sellprice undefined', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits([coche30]).should.be.equal(-3000.30);
+            calculateProfits([coche30]).should.be.equal(-3000.30);
         });
         it('should evaluate to 4000 for a valid car', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits([coche10]).should.be.equal(4000);
+            calculateProfits([coche10]).should.be.equal(4000);
         });
         it('should evaluate to 0 for 2 valid car', function() {
-            calculateProfits("").should.be.equal(1);
-            //calculateProfits([coche10, coche11]).should.be.equal(0);
+            calculateProfits([coche10, coche11]).should.be.equal(0);
         });
     });
     context('Check Validate Function', function() {
