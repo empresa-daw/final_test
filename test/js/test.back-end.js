@@ -120,4 +120,4 @@ describe('Test Profits on null', function() {
             //checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
     });    
-});
+})
