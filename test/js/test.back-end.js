@@ -57,24 +57,19 @@ describe('Test Profits on null', function() {
     });
     context('Check Validate Function', function() {
         it('should evaluate to false when empty numberPlate', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], , "12jan2015", 1000, 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], , "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when invalid numberPlate', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "MX-123-TD", "12jan2015", 1000, 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "MX-123-TD", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty sellprice', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12jan2015", , 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12jan2015", , 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty date', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "", 1000, 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when future date', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12dec3016", 1000, 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12dec3016", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when invalid date', function() {
             calculateProfits("").should.be.equal(1);
