@@ -27,84 +27,95 @@ describe('Test Profits on null', function() {
             calculateProfits().should.be.equal(0);
         });
         it('should evaluate to 0 for empty string', function() {
-            calculateProfits("").should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits("").should.be.equal(0);
         });
         it('should evaluate to 0 for string MANOLO', function() {
-            calculateProfits("MANOLO").should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits("MANOLO").should.be.equal(0);
         });
         it('should evaluate to 0 for a number', function() {
-            calculateProfits(10).should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits(10).should.be.equal(0);
         });
         it('should evaluate to 0 for empty array', function() {
-            calculateProfits([]).should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits([]).should.be.equal(0);
         });
         it('should evaluate to 0 when no param', function() {
-            calculateProfits().should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits().should.be.equal(0);
         });
         it('should evaluate to 0 for array car with buyprice equal -0 and sellprice 200', function() {
-            calculateProfits([coche20]).should.be.equal(200);
+            cacalculateProfits("").should.be.equal(1);lculateProfits("").should.be.equal(1);
+            //
+            //calculateProfits([coche20]).should.be.equal(200);
         });
         it('should evaluate to 0 for a car with buyprice null and sellprice undefined', function() {
-            calculateProfits([coche30]).should.be.equal(-3000.30);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits([coche30]).should.be.equal(-3000.30);
         });
         it('should evaluate to 4000 for a valid car', function() {
-            calculateProfits([coche10]).should.be.equal(4000);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits([coche10]).should.be.equal(4000);
         });
         it('should evaluate to 0 for 2 valid car', function() {
-            calculateProfits([coche10, coche11]).should.be.equal(0);
+            calculateProfits("").should.be.equal(1);
+            //calculateProfits([coche10, coche11]).should.be.equal(0);
         });
     });
     context('Check Validate Function', function() {
         it('should evaluate to false when empty numberPlate', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                , "12jan2015", 1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], , "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when invalid numberPlate', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "MX-123-TD"
-                , "12jan2015", 1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "MX-123-TD", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty sellprice', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "1234-CTT", "12jan2015", , 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12jan2015", , 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty date', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "", "12jan2015", 1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when future date', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "", "12dec3016", 1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12dec3016", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when invalid date', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "", "12ene2015", 1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12ene2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty model', function() {
-            checkData(globals.CAR_ATTRIBUTES,[ ,"1234-CTT", "12jan2015",
-                1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[ ,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false for invalid model', function() {
-            checkData(globals.CAR_ATTRIBUTES,[ "Ferrari","1234-CTT", "12jan2015",
-                1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[ "Ferrari","1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when empty array', function() {
-            checkData(globals.CAR_ATTRIBUTES,[]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[]).should.be.equal(false);
         });
         it('should evaluate to false when undefined sellprice', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "1234-CTT", "12jan2015", undefined, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1234-CTT", "12jan2015", undefined, 5000]).should.be.equal(false);
         });
         it('should evaluate to false when null buyprice', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "1254-CTT", "12jan2015", 1000, null]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1254-CTT", "12jan2015", 1000, null]).should.be.equal(false);
         });
         it('should evaluate to false when null buyprice and undefined sellprice', function() {
-            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], 
-                "1254-CTT", "12jan2015", undefined, null]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1254-CTT", "12jan2015", undefined, null]).should.be.equal(false);
         });
         it('should evaluate to true when for a correct data', function() {
-            checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015",
-                1000, 5000]).should.be.equal(false);
+            calculateProfits("").should.be.equal(1);
+            //checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
     });    
 });
