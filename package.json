@@ -1,0 +1,24 @@
+{
+    "name" : "jssampleproject",
+    "description": "A JS sample project",
+    "license": "MIT",
+    "version" : "0.0.1",
+    "dependencies" : {
+        "grunt": ">=0.4.0",
+        "grunt-cli": ">=0.1.13",
+        "mocha": ">=1.20.0",
+        "chai": "latest",
+        "showdown": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-jslint": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-mocha-test": "latest",
+        "grunt-markdown": "latest",
+        "grunt-contrib-watch": "latest"
+    },
+    "repository" : {
+        "type" : "git",
+	"url" : "git://github.com/username/repository.git"
+    }
+}

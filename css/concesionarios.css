@@ -1,0 +1,139 @@
+.botones {
+  display: block;
+  margin: 1% auto;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 10px;
+  font-family: Verdana,Helvetica;
+  font-weight: bold;
+  color: white;
+  background: #638cb5;
+  border: 0px;
+  padding: 8px;
+  width: 80px;
+  height: 20px;
+}
+body {
+  width: 960px;
+  background: aquamarine;
+  margin: auto;
+}
+body header {
+  width: 100%;
+  background-color: lightblue;
+  margin: auto;
+  border-bottom-right-radius: 20%;
+}
+body header select {
+  width: 15%;
+  margin: 8% 12%;
+  display: inline-block;
+  font-size: 1.5em;
+}
+body header h1 {
+  font-size: 2.8em;
+  display: inline-block;
+}
+nav {
+  margin: 2% 5%;
+}
+nav h4 {
+  text-align: center;
+  font-size: 1.5em;
+  color: red;
+}
+nav label {
+  display: inline-block;
+  margin: 1%;
+}
+nav input {
+  display: inline-block;
+  width: 130px;
+  margin: 1%;
+}
+nav h3::before {
+  content: "";
+  display: block;
+  border: solid lightblue;
+  margin: 0 0 3% 0;
+}
+nav h3 {
+  text-align: center;
+}
+nav select {
+  width: 16%;
+  display: block;
+  margin: 0 auto 5%;
+}
+section {
+  height: 100px;
+  padding: 6%;
+}
+section label {
+  margin: 1% 2%;
+  display: inline-block;
+}
+#vehiculos {
+  width: 80%;
+  border-collapse: collapse;
+  margin: auto;
+}
+#vehiculos tr td {
+  border: black 1px solid;
+  text-align: center;
+  background-color: white;
+}
+#vehiculos tbody tr:first-child td {
+  border: white 1px solid;
+  color: white;
+  background-color: blue;
+}
+#comprar,
+#venderAll,
+#vender,
+#buscar {
+  display: block;
+  margin: 1% auto;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 10px;
+  font-family: Verdana,Helvetica;
+  font-weight: bold;
+  color: white;
+  background: #638cb5;
+  border: 0px;
+  padding: 8px;
+  width: 80px;
+  height: 20px;
+}
+#comprar h1,
+#venderAll h1,
+#vender h1,
+#buscar h1 {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+#venderAll,
+#vender {
+  display: inline-block;
+  margin: 0 15%;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 13px;
+  font-family: Verdana,Helvetica;
+  font-weight: bold;
+  color: white;
+  background: #638cb5;
+  border: 0px;
+  padding: 8px;
+  width: 120px;
+  height: 30px;
+}
+h2 {
+  text-align: center;
+}
+.datos_compra {
+  display: inline-block;
+}
