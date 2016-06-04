@@ -90,12 +90,10 @@ describe('Test Profits on null', function() {
             checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1254-CTT", "12jan2015", 1000, null]).should.be.equal(false);
         });
         it('should evaluate to false when null buyprice and undefined sellprice', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1254-CTT", "12jan2015", undefined, null]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], "1254-CTT", "12jan2015", undefined, null]).should.be.equal(false);
         });
         it('should evaluate to true when for a correct data', function() {
-            calculateProfits("").should.be.equal(1);
-            //checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
+            checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
     });    
 });
