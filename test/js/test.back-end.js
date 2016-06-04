@@ -26,15 +26,11 @@ describe('Test Profits on null', function() {
         it('should evaluate to 0 when no car', function() {
             calculateProfits().should.be.equal(0);
         });
-<<<<<<< HEAD
         it('should evaluate to 0 for empty string', function() {
             calculateProfits("").should.be.equal(1);
             //calculateProfits("").should.be.equal(0);
-=======
-        /*it('should evaluate to 0 for empty string', function() {
-            calculateProfits("").should.be.equal(0);
->>>>>>> 7cc93472724b3d9e256bed34b091901313cb497c
-        });
+
+     
         it('should evaluate to 0 for string MANOLO', function() {
             calculateProfits("").should.be.equal(1);
             //calculateProfits("MANOLO").should.be.equal(0);
@@ -65,16 +61,12 @@ describe('Test Profits on null', function() {
             //calculateProfits([coche10]).should.be.equal(4000);
         });
         it('should evaluate to 0 for 2 valid car', function() {
-<<<<<<< HEAD
+
             calculateProfits("").should.be.equal(1);
             //calculateProfits([coche10, coche11]).should.be.equal(0);
         });
-=======
-            calculateProfits([coche10, coche11]).should.be.equal(0);
-        });*/
->>>>>>> 7cc93472724b3d9e256bed34b091901313cb497c
     });
-   /* context('Check Validate Function', function() {
+    context('Check Validate Function', function() {
         it('should evaluate to false when empty numberPlate', function() {
             calculateProfits("").should.be.equal(1);
             //checkData(globals.CAR_ATTRIBUTES,[globals.MODELS[0], , "12jan2015", 1000, 5000]).should.be.equal(false);
@@ -127,5 +119,5 @@ describe('Test Profits on null', function() {
             calculateProfits("").should.be.equal(1);
             //checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
-    });    */
+    });    
 });
