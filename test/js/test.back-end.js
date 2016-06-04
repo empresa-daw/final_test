@@ -29,7 +29,7 @@ describe('Test Profits on null', function() {
         it('should evaluate to 0 for empty string', function() {
             calculateProfits("").should.be.equal(1);
             //calculateProfits("").should.be.equal(0);
-
+        });
      
         it('should evaluate to 0 for string MANOLO', function() {
             calculateProfits("").should.be.equal(1);
@@ -61,7 +61,6 @@ describe('Test Profits on null', function() {
             //calculateProfits([coche10]).should.be.equal(4000);
         });
         it('should evaluate to 0 for 2 valid car', function() {
-
             calculateProfits("").should.be.equal(1);
             //calculateProfits([coche10, coche11]).should.be.equal(0);
         });
@@ -120,4 +119,4 @@ describe('Test Profits on null', function() {
             //checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
     });    
-})
+});
