@@ -140,4 +140,5 @@ describe('Test Profits on null', function() {
             checkDealerShip.filterColor(filter).should.be.deep.equal([coche01, coche10]);
         });
     });
+    
 });
