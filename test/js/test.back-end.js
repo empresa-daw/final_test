@@ -100,6 +100,7 @@ describe('Test Profits on null', function() {
         //Init dealerShip
         var checkDealerShip = new DealerShip(),
             filter = ['Negro', 0, 50000];
+            
 
         it('should evaluate to empty  Array when no car', function() {
             checkDealerShip.filterColor(filter).should.be.empty;
