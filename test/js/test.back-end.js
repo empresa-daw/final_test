@@ -24,7 +24,7 @@ var assert = chai.assert;
 describe('Test Profits on null', function() {
     context('Calculate Profits', function() {
         it('should evaluate to 0 when no car', function() {
-            calculateProfits().should.be.equal(1);
+            calculateProfits().should.be.equal(2);
         });
         it('should evaluate to 0 for empty string', function() {
             calculateProfits("").should.be.equal(0);
