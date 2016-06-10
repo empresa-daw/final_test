@@ -96,4 +96,48 @@ describe('Test Profits on null', function() {
             checkData(globals.CAR_ATTRIBUTES,[,"1234-CTT", "12jan2015", 1000, 5000]).should.be.equal(false);
         });
     });    
+    context('Check Filter', function() {
+        //Init dealerShip
+        var checkDealerShip = new DealerShip(),
+            filter = ['Negro', 0, 50000];
+
+        it('should evaluate to empty  Array when no car', function() {
+            checkDealerShip.filterColor(filter).should.be.empty;
+        });
+        it('should evaluate to [coche10] for one Car no filter', function() {
+            checkDealerShip.cars.push(coche10);
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche10]);
+        });
+        it('should evaluate to [coche10] for two Car filter color Negro', function() {
+            checkDealerShip.cars.push(coche11);
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche10]);
+        });
+        it('should evaluate to [coche01] filter by min price 2000', function() {
+            checkDealerShip.sellCars([coche11, coche10]);
+            checkDealerShip.cars.push(coche01);
+            checkDealerShip.cars.push(coche10);
+            filter = ['Negro', 2000, 15000];
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche01]);
+        });
+        it('should evaluate to [coche01, coche10] filter by min price 500', function() {
+            filter = ['Negro', 500, 16000];
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche01, coche10]);
+        });
+        it('should evaluate to empty Array filter by min price 10000', function() {
+            filter = ['Negro', 10000, 16000];
+            checkDealerShip.filterColor(filter).should.be.empty;
+        });
+        it('should evaluate to empty Array filter by max price 500', function() {
+            filter = ['Negro', 0, 500];
+            checkDealerShip.filterColor(filter).should.be.empty;
+        });
+        it('should evaluate to [coche10] filter by max price 2000', function() {
+            filter = ['Negro', 0, 2000];
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche10]);
+        });
+        it('should evaluate to [coche10, coche01] filter by max price 3000', function() {
+            filter = ['Negro', 0, 3000];
+            checkDealerShip.filterColor(filter).should.be.deep.equal([coche01, coche10]);
+        });
+    });
 });
